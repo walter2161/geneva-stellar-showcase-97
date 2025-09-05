@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react"
 
 const images = [
-  "/lovable-uploads/profissional-1.png",
-  "/lovable-uploads/profissional-2.png",
-  "/lovable-uploads/profissional-3.png"
+  "/lovable-uploads/a71129c9-ec1f-490c-8c0b-88097ef2811c.png",
+  "/lovable-uploads/f6ac3eb5-712d-4f30-b137-0dbf77eade94.png",
+  "/lovable-uploads/6421d2ba-b203-4508-a5a7-59e804c07708.png"
 ]
 
 export default function ImageCarousel() {
