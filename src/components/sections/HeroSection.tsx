@@ -19,7 +19,7 @@ export default function HeroSection() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
           {/* Content Column */}
           <div className="text-center lg:text-left text-white">
             {/* Badge */}
@@ -40,7 +40,7 @@ export default function HeroSection() {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-12">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
               <GenevaButton 
                 variant="hero" 
                 size="lg"
@@ -56,44 +56,44 @@ export default function HeroSection() {
                 Nossa História
               </GenevaButton>
             </div>
-
-            {/* Stats Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="glass-dark backdrop-blur-lg border border-white/20 rounded-xl p-4 hover-lift">
-                <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center mb-3 mx-auto lg:mx-0">
-                  <Building className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="text-lg font-bold mb-1">Experiência Comprovada</h3>
-                <p className="text-slate-300 text-xs">
-                  Atendemos clientes de alto nível como a Sabesp
-                </p>
-              </div>
-
-              <div className="glass-dark backdrop-blur-lg border border-white/20 rounded-xl p-4 hover-lift">
-                <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center mb-3 mx-auto lg:mx-0">
-                  <Users className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="text-lg font-bold mb-1">+200 Funcionários</h3>
-                <p className="text-slate-300 text-xs">
-                  Equipe qualificada e em constante crescimento
-                </p>
-              </div>
-
-              <div className="glass-dark backdrop-blur-lg border border-white/20 rounded-xl p-4 hover-lift">
-                <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center mb-3 mx-auto lg:mx-0">
-                  <Award className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="text-lg font-bold mb-1">+10 Contratos</h3>
-                <p className="text-slate-300 text-xs">
-                  Soluções personalizadas e resultados garantidos
-                </p>
-              </div>
-            </div>
           </div>
 
           {/* Image Column */}
           <div className="relative h-96 lg:h-[500px]">
             <ImageCarousel />
+          </div>
+        </div>
+
+        {/* Stats Cards - Back to original position */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-white">
+          <div className="glass-dark backdrop-blur-lg border border-white/20 rounded-2xl p-6 hover-lift">
+            <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center mb-4 mx-auto">
+              <Building className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="text-xl font-bold mb-2">Experiência Comprovada</h3>
+            <p className="text-slate-300 text-sm">
+              Atendemos clientes de alto nível como a Sabesp
+            </p>
+          </div>
+
+          <div className="glass-dark backdrop-blur-lg border border-white/20 rounded-2xl p-6 hover-lift">
+            <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center mb-4 mx-auto">
+              <Users className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="text-xl font-bold mb-2">+200 Funcionários</h3>
+            <p className="text-slate-300 text-sm">
+              Equipe qualificada e em constante crescimento
+            </p>
+          </div>
+
+          <div className="glass-dark backdrop-blur-lg border border-white/20 rounded-2xl p-6 hover-lift">
+            <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center mb-4 mx-auto">
+              <Award className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="text-xl font-bold mb-2">+10 Contratos</h3>
+            <p className="text-slate-300 text-sm">
+              Soluções personalizadas e resultados garantidos
+            </p>
           </div>
         </div>
       </div>
