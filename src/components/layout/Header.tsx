@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react"
+import { Menu, X } from "lucide-react"
 import { GenevaButton } from "@/components/ui/geneva-button"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { scrollToSection, isDarkSection } from "@/lib/scroll"
 
 export default function Header() {
@@ -73,13 +75,71 @@ export default function Header() {
               </a>
             </div>
 
-            {/* CTA Button */}
-            <GenevaButton 
-              variant="primary"
-              onClick={() => scrollToSection('contato')}
-            >
-              Fale Conosco
-            </GenevaButton>
+            {/* Desktop CTA Button */}
+            <div className="hidden md:block">
+              <GenevaButton 
+                variant="primary"
+                onClick={() => scrollToSection('contato')}
+              >
+                Fale Conosco
+              </GenevaButton>
+            </div>
+
+            {/* Mobile Menu */}
+            <div className="md:hidden">
+              <Sheet>
+                <SheetTrigger asChild>
+                  <button 
+                    className={`p-2 rounded-md transition-colors ${isOnDarkSection ? 'text-white hover:bg-white/10' : 'text-text-primary hover:bg-gray-100'}`}
+                    aria-label="Abrir menu"
+                  >
+                    <Menu className="w-6 h-6" />
+                  </button>
+                </SheetTrigger>
+                <SheetContent side="right" className="w-80">
+                  <div className="flex flex-col gap-6 mt-8">
+                    <a 
+                      href="#sobre" 
+                      onClick={(e) => handleNavClick(e, 'sobre')}
+                      className="text-lg font-medium text-text-primary hover:text-geneva-accent transition-colors py-2"
+                    >
+                      Sobre
+                    </a>
+                    <a 
+                      href="#servicos" 
+                      onClick={(e) => handleNavClick(e, 'servicos')}
+                      className="text-lg font-medium text-text-primary hover:text-geneva-accent transition-colors py-2"
+                    >
+                      Serviços
+                    </a>
+                    <a 
+                      href="#valores" 
+                      onClick={(e) => handleNavClick(e, 'valores')}
+                      className="text-lg font-medium text-text-primary hover:text-geneva-accent transition-colors py-2"
+                    >
+                      Valores
+                    </a>
+                    <a 
+                      href="#contato" 
+                      onClick={(e) => handleNavClick(e, 'contato')}
+                      className="text-lg font-medium text-text-primary hover:text-geneva-accent transition-colors py-2"
+                    >
+                      Contato
+                    </a>
+                    <div className="mt-4">
+                      <GenevaButton 
+                        variant="primary"
+                        size="lg"
+                        onClick={() => scrollToSection('contato')}
+                        className="w-full"
+                      >
+                        Fale Conosco
+                      </GenevaButton>
+                    </div>
+                  </div>
+                </SheetContent>
+              </Sheet>
+            </div>
           </div>
         </div>
       </nav>
