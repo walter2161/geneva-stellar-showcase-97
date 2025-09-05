@@ -44,8 +44,8 @@ export default function AboutSection() {
           <div className="relative">
             <div className="rounded-3xl overflow-hidden shadow-2xl hover-lift">
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop&crop=faces"
-                alt="Profissional sorrindo em ambiente corporativo"
+                src="/lovable-uploads/f6f946fc-5e88-4b47-b984-57e3748d3e56.png"
+                alt="Equipe profissional da Geneva Serviços"
                 className="w-full h-full object-cover"
               />
             </div>
